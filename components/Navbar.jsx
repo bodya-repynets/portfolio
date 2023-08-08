@@ -1,10 +1,18 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
+
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [active, setActive] = useState(null);
+  const handleClick = (name) => {
+    const str = window.location.hash;
+    console.log(str);
+  };
+
   return (
     <>
       <div className="hidden fixed sm:flex gap-[50px] z-10 w-full h- bg-slate-900 bg-opacity-50 h-[80px] items-center justify-center text-[20px] font-semibold tracking-[3px]">

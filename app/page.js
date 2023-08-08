@@ -1,3 +1,4 @@
+"use client";
 import Hello from "@/components/Introduction";
 import Projects from "@/components/Projects";
 import Technologies from "@/components/Technologies";
