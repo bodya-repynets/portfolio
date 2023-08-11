@@ -1,10 +1,10 @@
 "use client";
-import Item1 from "./Item1";
-import Item2 from "./Item2";
-import Item3 from "./Item3";
+import arr from "@/lib/projects";
 import { useEffect, useRef } from "react";
 import { useAnimation, useInView } from "framer-motion";
 import { motion } from "framer-motion";
+import Item from "./Item";
+
 const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -23,9 +23,9 @@ const Projects = () => {
         ref={ref}
         className="flex flex-col flex-wrap gap-[20px] lg:gap-[40px] items-center justify-center w-[100vw] max-w-[1200px] h-[450px] pb-[20px] snap-x overflow-x-scroll scroll-smooth px-[50px]"
       >
-        <Item1 mainControl={mainControl} />
-        <Item2 mainControl={mainControl} />
-        <Item3 mainControl={mainControl} />
+        {arr.map((item) => (
+          <Item key={item.name} mainControl={mainControl} item={item} />
+        ))}
       </motion.div>
     </section>
   );

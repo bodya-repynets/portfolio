@@ -1,17 +1,11 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [active, setActive] = useState(null);
-  const handleClick = (name) => {
-    const str = window.location.hash;
-    console.log(str);
-  };
 
   return (
     <>
