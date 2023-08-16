@@ -41,11 +41,8 @@ const Skills = () => {
   return (
     <section
       id="technologies"
-      className="w-full px-[10px] shrink-0 flex flex-col items-center justify-center min-h-screen gap-[50px] lg:gap-[100px] snap-start snap-always py-[40px] lg:py-[80px]"
+      className="w-full px-[10px] shrink-0 flex flex-col items-center justify-center min-h-screen gap-[50px] lg:gap-[100px] snap-start snap-always py-[40px] lg:py-[80px] relative"
     >
-      <p className="text-[20px] md:text-[24px]  font-semibold tracking-[3px] text-center bg-slate-900 bg-opacity-50 rounded-xl shadow-xl p-[10px]">
-        Technologies I have experience with.
-      </p>
       <motion.div
         ref={ref}
         className="flex flex-col flex-wrap gap-[20px] lg:gap-[40px] items-center justify-center w-[100vw] max-w-[1200px] h-[280px] lg:h-[400px] pb-[20px] snap-x overflow-x-scroll scroll-smooth px-[50px]"

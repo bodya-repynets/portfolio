@@ -9,14 +9,14 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="hidden fixed sm:flex gap-[50px] z-10 w-full h- bg-slate-900 bg-opacity-50 h-[80px] items-center justify-center text-[20px] font-semibold tracking-[3px]">
-        <Link className="hover:scale-110 duration-100" href={"#introduction"}>
+      <div className="hidden fixed sm:flex gap-[50px] z-10 w-full h- bg-slate-900 bg-opacity-50 h-[80px] items-center justify-center text-[16px] font-semibold tracking-[3px]">
+        <Link className="hover:scale-110 duration-100 uppercase" href={"#introduction"}>
           Introduction
         </Link>
-        <Link className="hover:scale-110 duration-100" href={"#technologies"}>
+        <Link className="hover:scale-110 duration-100 uppercase" href={"#technologies"}>
           Technologies
         </Link>
-        <Link className="hover:scale-110 duration-100" href={"#projects"}>
+        <Link className="hover:scale-110 duration-100 uppercase" href={"#projects"}>
           Projects
         </Link>
       </div>

@@ -17,7 +17,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-[80%] shrink-0 flex flex-col items-center justify-center min-h-screen gap-[50px] snap-start snap-always py-[80px]"
+      className="w-[80%] shrink-0 flex flex-col items-center justify-center min-h-screen gap-[50px] snap-start snap-always py-[80px] relative"
     >
       <motion.div
         ref={ref}

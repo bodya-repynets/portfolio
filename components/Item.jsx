@@ -17,7 +17,7 @@ const Item = ({ mainControl, item }) => {
       animate={mainControl}
       className="w-[300px] justify-between h-full flex flex-col items-center bg-slate-900 bg-opacity-50 rounded-xl overflow-hidden pb-[20px] relative"
     >
-      <Link className="relative" href={item.href}>
+      <Link target="_blank" className="relative" href={item.href}>
         <Image
           src={item.image}
           className="w-[300px] hover:scale-110 duration-100"
