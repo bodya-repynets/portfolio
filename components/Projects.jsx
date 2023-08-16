@@ -4,13 +4,16 @@ import { useEffect, useRef } from "react";
 import { useAnimation, useInView } from "framer-motion";
 import { motion } from "framer-motion";
 import Item from "./Item";
+import { useGlobalContext } from "@/app/context";
 
 const Projects = () => {
+  const { setSection } = useGlobalContext();
   const ref = useRef(null);
   const isInView = useInView(ref);
   const mainControl = useAnimation();
   useEffect(() => {
     if (isInView) {
+      setSection("projects");
       mainControl.start("visible");
     }
   }, [isInView]);

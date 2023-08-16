@@ -15,7 +15,9 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { useAnimation, useInView } from "framer-motion";
 import { motion } from "framer-motion";
+import { useGlobalContext } from "@/app/context";
 const Skills = () => {
+  const { setSection } = useGlobalContext();
   const arr = [
     [jsLogo, "Java Script"],
     [reactLogo, "React"],
@@ -35,6 +37,7 @@ const Skills = () => {
   const mainControl = useAnimation();
   useEffect(() => {
     if (isInView) {
+      setSection("technologies");
       mainControl.start("visible");
     }
   }, [isInView]);

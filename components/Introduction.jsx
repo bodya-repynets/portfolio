@@ -4,11 +4,21 @@ import profile from "@/public/profile.jpeg";
 import Link from "next/link";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { BsTelegram } from "react-icons/bs";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useTypingEffect } from "@/hooks/typing-effect";
+import { useEffect, useRef } from "react";
+import { useGlobalContext } from "@/app/context";
 
 const Introduction = () => {
+  const ref = useRef(null);
+  const { setSection } = useGlobalContext();
+  const isInView = useInView(ref);
   const text = useTypingEffect("Bohdan Repynets Frontend Developer", 100);
+  useEffect(() => {
+    if (isInView) {
+      setSection("introduction");
+    }
+  }, [isInView]);
   return (
     <section
       id="introduction"
@@ -16,6 +26,7 @@ const Introduction = () => {
     >
       <div className="flex flex-col items-center gap-[30px] sm:gap-[50px]">
         <motion.div
+          ref={ref}
           variants={{
             hidden: { opacity: 0 },
             visible: { opacity: 1 },
