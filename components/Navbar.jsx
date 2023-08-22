@@ -3,7 +3,12 @@ import { useGlobalContext } from "@/app/context";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import {
+  AiOutlineMenu,
+  AiOutlineClose,
+  AiFillGithub,
+  AiFillLinkedin,
+} from "react-icons/ai";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -11,7 +16,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="hidden fixed sm:flex gap-[50px] z-10 w-full h- bg-slate-900 bg-opacity-50 h-[80px] items-center justify-center text-[16px] font-semibold tracking-[3px]">
+      <div className="hidden fixed lg:flex gap-[50px] z-10 w-full h- bg-slate-900 bg-opacity-50 h-[80px] items-center justify-center text-[16px] font-semibold tracking-[3px]">
         <Link
           className={`${
             section === "introduction" && "text-rose-500"
@@ -36,10 +41,26 @@ const Navbar = () => {
         >
           Projects
         </Link>
+        <div className="fixed top-0 right-0 flex items-center justify-center w-[150px] h-[80px] gap-[20px]">
+          <Link
+            className="hover:scale-110 duration-100"
+            target="_blank"
+            href={"https://github.com/bodya-repynets"}
+          >
+            <AiFillGithub className="text-[24px]" />
+          </Link>
+          <Link
+            className="hover:scale-110 duration-100"
+            target="_blank"
+            href={"https://www.linkedin.com/in/bohdan-repynets-07b125262/"}
+          >
+            <AiFillLinkedin className="text-[24px]" />
+          </Link>
+        </div>
       </div>
       <button
         onClick={() => setShowMenu(!showMenu)}
-        className="flex sm:hidden fixed top-[20px] right-[20px] z-10 hover:scale-110 duration-100"
+        className="flex lg:hidden fixed top-[20px] right-[20px] z-10 hover:scale-110 duration-100"
       >
         <AiOutlineMenu className="text-[40px]" />
       </button>
@@ -69,6 +90,22 @@ const Navbar = () => {
         >
           Projects
         </Link>
+        <div className="fixed bottom-[50px] right-[calc(50vw-75px)] flex items-center w-[150px] justify-center gap-[40px]">
+          <Link
+            className="hover:scale-110 duration-100"
+            target="_blank"
+            href={"https://github.com/bodya-repynets"}
+          >
+            <AiFillGithub className="text-[40px]" />
+          </Link>
+          <Link
+            className="hover:scale-110 duration-100"
+            target="_blank"
+            href={"https://www.linkedin.com/in/bohdan-repynets-07b125262/"}
+          >
+            <AiFillLinkedin className="text-[40px]" />
+          </Link>
+        </div>
         <button
           onClick={() => setShowMenu(!showMenu)}
           className="absolute top-[20px] right-[20px] hover:scale-110 duration-100"

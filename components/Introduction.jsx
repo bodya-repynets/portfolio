@@ -23,7 +23,7 @@ const Introduction = () => {
     const host = window.location.origin;
     const link = document.createElement("a");
     link.href = host + "/resume.pdf";
-    link.download = "resume.pdf";
+    link.download = "bohdan-repynets-resume.pdf";
     link.click();
   };
   return (
@@ -60,29 +60,6 @@ const Introduction = () => {
           transition={{ duration: 3, delay: 3 }}
           initial="hidden"
           animate="visible"
-          className="flex gap-[50px]"
-        >
-          <Link
-            className="hover:scale-110 duration-100"
-            href={"https://github.com/bodya-repynets"}
-          >
-            <AiFillGithub className="text-[24px]" />
-          </Link>
-          <Link className="hover:scale-110 duration-100" href={""}>
-            <AiFillLinkedin className="text-[24px]" />
-          </Link>
-          <Link className="hover:scale-110 duration-100" href={""}>
-            <BsTelegram className="text-[24px]" />
-          </Link>
-        </motion.div>
-        <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 80 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          transition={{ duration: 3, delay: 3 }}
-          initial="hidden"
-          animate="visible"
           className="flex flex-col sm:flex-row gap-[20px] sm:gap-[50px]"
         >
           <button
@@ -91,9 +68,12 @@ const Introduction = () => {
           >
             Get CV
           </button>
-          <button className="bg-gradient-to-r from-rose-600 to-rose-800 hover:from-rose-800 hover:to-rose-900 w-[200px] h-[50px] font-semibold uppercase tracking-[3px] rounded-xl hover:scale-110 duration-100">
-            Contact
-          </button>
+          <Link target="_blank" href={"https://t.me/bodyaaaaaaaa"}>
+            <button className="bg-gradient-to-r from-rose-600 to-rose-800 hover:from-rose-800 hover:to-rose-900 w-[200px] h-[50px] font-semibold uppercase tracking-[3px] rounded-xl hover:scale-110 duration-100 flex gap-[10px] justify-center items-center">
+              Contact
+              <BsTelegram className="text-[24px]" />
+            </button>
+          </Link>
         </motion.div>
       </div>
     </section>
