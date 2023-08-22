@@ -64,6 +64,12 @@ const Navbar = () => {
       >
         <AiOutlineMenu className="text-[40px]" />
       </button>
+      <span
+        onClick={() => setShowMenu(!showMenu)}
+        className="flex lg:hidden fixed top-[20px] left-[20px] z-10 capitalize font-semibold tracking-[3px]"
+      >
+        {section}
+      </span>
       <div
         className={`absolute z-20 w-[100vw] h-[100vh] bg-gradient-to-b from-rose-700 to-rose-900 text-[24px] gap-[50px] ${
           showMenu ? "flex flex-col justify-center items-center" : "hidden"
@@ -90,7 +96,7 @@ const Navbar = () => {
         >
           Projects
         </Link>
-        <div className="fixed bottom-[50px] right-[calc(50vw-75px)] flex items-center w-[150px] justify-center gap-[40px]">
+        <div className="absolute bottom-[50px] right-[calc(50vw-75px)] flex items-center w-[150px] justify-center gap-[40px]">
           <Link
             className="hover:scale-110 duration-100"
             target="_blank"

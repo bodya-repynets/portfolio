@@ -43,7 +43,7 @@ const Introduction = () => {
           animate="visible"
         >
           <Image
-            className="w-[200px] h-[200px] object-cover rounded-full shadow-xl border-rose-700 border-4"
+            className="w-[200px] h-[200px] object-cover rounded-full shadow-xlgi"
             src={profile}
             alt="profile photo"
           />
