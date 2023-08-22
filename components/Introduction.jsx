@@ -20,8 +20,9 @@ const Introduction = () => {
     }
   }, [isInView]);
   const getResume = () => {
+    const host = window.location.origin;
     const link = document.createElement("a");
-    link.href = "http://localhost:3000" + "/resume.pdf";
+    link.href = host + "/resume.pdf";
     link.download = "resume.pdf";
     link.click();
   };
