@@ -19,6 +19,12 @@ const Introduction = () => {
       setSection("introduction");
     }
   }, [isInView]);
+  const getResume = () => {
+    const link = document.createElement("a");
+    link.href = "http://localhost:3000" + "/resume.pdf";
+    link.download = "resume.pdf";
+    link.click();
+  };
   return (
     <section
       id="introduction"
@@ -78,7 +84,10 @@ const Introduction = () => {
           animate="visible"
           className="flex flex-col sm:flex-row gap-[20px] sm:gap-[50px]"
         >
-          <button className="bg-gradient-to-r from-rose-600 to-rose-800 hover:from-rose-800 hover:to-rose-900 w-[200px] h-[50px] font-semibold uppercase tracking-[3px] rounded-xl hover:scale-110 duration-100">
+          <button
+            onClick={getResume}
+            className="bg-gradient-to-r from-rose-600 to-rose-800 hover:from-rose-800 hover:to-rose-900 w-[200px] h-[50px] font-semibold uppercase tracking-[3px] rounded-xl hover:scale-110 duration-100"
+          >
             Get CV
           </button>
           <button className="bg-gradient-to-r from-rose-600 to-rose-800 hover:from-rose-800 hover:to-rose-900 w-[200px] h-[50px] font-semibold uppercase tracking-[3px] rounded-xl hover:scale-110 duration-100">
