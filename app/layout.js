@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className="text-white bg-gradient-to-b from-slate-400 to-slate-600"
     >
-      <body className={inter.className}>
+      <body className={`{inter.className} scroll-smooth`}>
         <AppContext>
           <Navbar />
           {children}
