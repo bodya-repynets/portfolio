@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
-import profile from "@/public/profile.jpeg";
+import profile from "@/public/profile.jpg";
 import Link from "next/link";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { BsTelegram } from "react-icons/bs";
 import { motion, useInView } from "framer-motion";
 import { useTypingEffect } from "@/hooks/typing-effect";
@@ -43,7 +42,7 @@ const Introduction = () => {
           animate="visible"
         >
           <Image
-            className="w-[200px] h-[200px] object-cover rounded-full shadow-xlgi"
+            className="w-[200px] h-[200px] object-cover rounded-full shadow-xl border-[4px]"
             src={profile}
             alt="profile photo"
           />

@@ -10,7 +10,9 @@ import nextLogo from "@/public/logos/next.svg";
 import visualStudioLogo from "@/public/logos/visual-studio.svg";
 import tailwindLogo from "@/public/logos/tailwind.svg";
 import githubLogo from "@/public/logos/github.svg";
-import mongoDbLogo from "@/public/logos/mongo-db.svg";
+import sanityLogo from "@/public/logos/sanity.svg";
+import stripeLogo from "@/public/logos/stripe.svg";
+import typescriptLogo from "@/public/logos/typescript.svg";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { useAnimation, useInView } from "framer-motion";
@@ -30,7 +32,9 @@ const Skills = () => {
     [visualStudioLogo, "Visual Studio"],
     [tailwindLogo, "Tailwind CSS"],
     [githubLogo, "Git Hub"],
-    [mongoDbLogo, "Mongo DB"],
+    [sanityLogo, "Sanity"],
+    [stripeLogo, "Stripe Payment"],
+    [typescriptLogo, "TypeScript"],
   ];
   const ref = useRef(null);
   const isInView = useInView(ref);

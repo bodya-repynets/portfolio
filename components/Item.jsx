@@ -54,7 +54,7 @@ const Item = ({ mainControl, item }) => {
       <p
         className={`${
           hidden ? "hidden" : "block"
-        } text-center text-[12px] font-semibold tracking-[2px] absolute bottom-[50px] duration-200 bg-rose-700 p-[10px] `}
+        } text-center text-[12px] text-slate-700 font-semibold tracking-[2px] absolute bottom-[50px] duration-200 bg-rose-100 p-[10px] `}
       >
         Description:{item.description}
       </p>

@@ -1,7 +1,7 @@
 "use client";
 import { useGlobalContext } from "@/app/context";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import {
   AiOutlineMenu,
@@ -19,24 +19,24 @@ const Navbar = () => {
       <div className="hidden fixed lg:flex gap-[50px] z-10 w-full h- bg-slate-900 bg-opacity-50 h-[80px] items-center justify-center text-[16px] font-semibold tracking-[3px]">
         <Link
           className={`${
-            section === "introduction" && "text-rose-500"
-          } hover:scale-110 duration-100 uppercase`}
+            section === "introduction" && "bg-rose-700"
+          } h-[100%] p-[20px] flex items-center hover:scale-110 duration-100 uppercase`}
           href={"#introduction"}
         >
           Introduction
         </Link>
         <Link
           className={`${
-            section === "technologies" && "text-rose-500"
-          } hover:scale-110 duration-100 uppercase`}
+            section === "technologies" && "bg-rose-700"
+          } h-[100%] p-[20px] flex items-center hover:scale-110 duration-100 uppercase`}
           href={"#technologies"}
         >
           Technologies
         </Link>
         <Link
           className={`${
-            section === "projects" && "text-rose-500"
-          } hover:scale-110 duration-100 uppercase`}
+            section === "projects" && "bg-rose-700"
+          } h-[100%] p-[20px] flex items-center hover:scale-110 duration-100 uppercase`}
           href={"#projects"}
         >
           Projects
